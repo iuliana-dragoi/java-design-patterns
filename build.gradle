@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+}
+
+// Project metadata
+group = 'crode.patterns'
+version = '1.0.0'
+description = 'Java Design Patterns Implementation'
+
+// Java version configuration
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// Global repositories
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+// Configuration for all subprojects
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    group = rootProject.group
+    version = rootProject.version
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    dependencies {
+        implementation 'org.slf4j:slf4j-api:2.0.6'
+        implementation 'ch.qos.logback:logback-classic:1.4.6'
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+}
+
+task testAll {
+    dependsOn subprojects.test
+    doLast {
+        println "All tests executed."
+    }
+}
+
+task runAllDemos {
+    doLast {
+        println "Running all demos:"
+        subprojects.each { proj ->
+            if (proj.plugins.hasPlugin('application') && proj.extensions.findByName('application')?.mainClass != null) {
+                println "Running: ${proj.name}"
+                proj.tasks.named('run').get().execute()
+            }
+        }
+    }
+}
