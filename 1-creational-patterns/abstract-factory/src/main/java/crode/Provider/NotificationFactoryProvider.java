@@ -1,9 +1,9 @@
-package crode.AbstractFactory.Provider;
+package crode.Provider;
 
-import crode.AbstractFactory.Factory.AbstractFactory.NotificationAbstractFactory;
-import crode.AbstractFactory.Factory.EnterpriseNotificationFactory;
-import crode.AbstractFactory.Factory.MobileNotificationFactory;
-import crode.AbstractFactory.Factory.WebNotificationFactory;
+import crode.Factory.AbstractFactory.NotificationAbstractFactory;
+import crode.Factory.EnterpriseNotificationFactory;
+import crode.Factory.MobileNotificationFactory;
+import crode.Factory.WebNotificationFactory;
 
 public class NotificationFactoryProvider {
 

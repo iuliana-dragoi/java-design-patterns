@@ -1,9 +1,9 @@
-package crode.AbstractFactory.Factory;
+package crode.Factory;
 
-import crode.AbstractFactory.Factory.AbstractFactory.NotificationAbstractFactory;
-import crode.AbstractFactory.Notifications.MobileInstantNotification;
-import crode.AbstractFactory.Notifications.MobileScheduledNotification;
-import crode.Common.Notification;
+import crode.Factory.AbstractFactory.NotificationAbstractFactory;
+import crode.Notification;
+import crode.Notifications.MobileInstantNotification;
+import crode.Notifications.MobileScheduledNotification;
 
 public class MobileNotificationFactory implements NotificationAbstractFactory {
 

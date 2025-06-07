@@ -1,7 +1,7 @@
-package crode.AbstractFactory.Notifications;
+package crode.Notifications;
 
-import crode.Common.Notification;
-import crode.Common.NotificationType;
+import crode.Notification;
+import crode.NotificationType;
 
 public class MobileScheduledNotification implements Notification {
 

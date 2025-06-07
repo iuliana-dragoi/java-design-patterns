@@ -1,6 +1,6 @@
-package crode.AbstractFactory.Factory.AbstractFactory;
+package crode.Factory.AbstractFactory;
 
-import crode.Common.Notification;
+import crode.Notification;
 
 public interface NotificationAbstractFactory {
     Notification createInstantNotification();

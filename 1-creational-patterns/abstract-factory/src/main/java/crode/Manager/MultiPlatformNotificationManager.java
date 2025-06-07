@@ -1,7 +1,7 @@
-package crode.AbstractFactory.Manager;
+package crode.Manager;
 
-import crode.AbstractFactory.Factory.AbstractFactory.NotificationAbstractFactory;
-import crode.Common.Notification;
+import crode.Factory.AbstractFactory.NotificationAbstractFactory;
+import crode.Notification;
 
 public class MultiPlatformNotificationManager {
 

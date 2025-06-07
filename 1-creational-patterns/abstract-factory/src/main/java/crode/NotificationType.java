@@ -1,0 +1,22 @@
+package crode;
+
+public enum NotificationType {
+
+    EMAIL,
+    SMS,
+    PUSH,
+    SLACK,
+
+    MARKETING_EMAIL,
+    SECURITY_SMS,
+    SOCIAL_PUSH,
+    SYSTEM_ALERT,
+
+    MOBILE_INSTANT,
+    MOBILE_SCHEDULED,
+    WEB_INSTANT,
+    WEB_SCHEDULED,
+    ENTERPRISE_INSTANT,
+    ENTERPRISE_SCHEDULED
+
+}
