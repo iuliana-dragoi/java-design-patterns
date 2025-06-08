@@ -18,6 +18,7 @@ include("3-behavioral-patterns:observer")
 include("3-behavioral-patterns:state")
 include("3-behavioral-patterns:strategy")
 include("3-behavioral-patterns:template-method")
+include("3-behavioral-patterns:iterator")
 
 include("4-java-specific-patterns:dao")
 include("4-java-specific-patterns:mvc")
